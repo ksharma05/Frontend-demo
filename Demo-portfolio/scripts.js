@@ -60,9 +60,9 @@ const arr1 = [
     popuptitle: 'Multi-Post Stories',
     popupdescription: 'This is the first This is the firtst A daily selection of privately personalized reads no accounts or sign-ups required. Has been the industry standard dummy test number 1',
     popuptec: ['CSS', 'Html', 'Bootstrap'],
-    popupimg: './images/card_works_background-alt-2.png',
-    btnlive: 'https://www.github.com',
-    btnsource: 'https://www.github.com',
+    popupimg: './images/code.png',
+    btnlive: '#',
+    btnsource: '#',
     btnName: 'btn1',
     btnimg1: './pictures/TimeAndIcons/github.png',
     btnimg2: './pictures/TimeAndIcons/github.png',
@@ -71,10 +71,10 @@ const arr1 = [
     id: 1,
     popuptitle: 'Multi-Post Stories',
     popupdescription: 'This is the second A daily for this is a test and is test number 2',
-    popuptec: ['CSS', 'HTML', 'Bootstrap', 'Ruby'],
+    popuptec: ['CSS', 'HTML', 'Bootstrap'],
     popupimg: './images/card_works_background-alt-3.png',
-    btnlive: 'https://www.github.com',
-    btnsource: 'https://www.github.com',
+    btnlive: '#',
+    btnsource: '#',
     btnName: 'btn3',
     btnimg1: './pictures/TimeAndIcons/github.png',
     btnimg2: './pictures/TimeAndIcons/github.png',
@@ -83,10 +83,10 @@ const arr1 = [
     id: 2,
     popuptitle: 'Multi-Post Stories',
     popupdescription: 'This is the third A daily for this is a test and is test number 3',
-    popuptec: ['CSS', 'HTML', 'Bootstrap', 'Ruby'],
+    popuptec: ['CSS', 'HTML', 'Bootstrap'],
     popupimg: './images/card_works_background-alt-4.png',
-    btnlive: 'https://www.github.com',
-    btnsource: 'https://www.github.com',
+    btnlive: '#',
+    btnsource: '#',
     btnName: 'btn4',
     btnimg1: './pictures/TimeAndIcons/github.png',
     btnimg2: './pictures/TimeAndIcons/github.png',
@@ -97,7 +97,7 @@ const lang1 = arr1[0].popuptec[0];
 const lang2 = arr1[0].popuptec[1];
 const lang3 = arr1[0].popuptec[2];
 
-document.getElementById('card-works-container').innerHTML = arr1.map((items) => `<div class="card-works" style="background-image: url('${items.popupimg}');">  
+document.getElementById('card-works-container').innerHTML = arr1.map((items) => `<div class="card-works" style="background-image: url('./images/bg.png');">  
               <h2 class="card-works-title" id="card-works-title">${items.popuptitle}</h2>
               <p class="card-works-description" id="card-works-description">${items.popupdescription}</p>
               <ul class="card-works-tech">
@@ -114,7 +114,7 @@ const proj1 = {
   title: 'Multi Post Stories',
   img: './images/popup-img.png',
   description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry´s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
-  techList: ['Html', 'Bootstrap', 'Ruby on rails'],
+  techList: ['Html', 'Bootstrap', 'JavaScript'],
 };
 
 const tech1 = proj1.techList[0];
@@ -132,8 +132,8 @@ btn4.addEventListener('click', () => {
   document.getElementById('popup-techList3').innerHTML = tech3;
   document.getElementById('popup-img').src = proj1.img;
   document.getElementById('popup-description').innerHTML = proj1.description;
-  document.getElementById('popup-live').href = 'https://flunavgt.github.io/Federico-s_Portfolio/';
-  document.getElementById('popup-source').href = 'https://github.com/Camilovelag/MV_Portfolio';
+  document.getElementById('popup-live').href = '#';
+  document.getElementById('popup-source').href = '#';
 });
 
 const btn0 = document.querySelector('#project-0');
@@ -144,10 +144,10 @@ btn0.addEventListener('click', () => {
   document.getElementById('popup-techList1').innerHTML = lang1;
   document.getElementById('popup-techList2').innerHTML = lang2;
   document.getElementById('popup-techList3').innerHTML = lang3;
-  document.getElementById('popup-img').src = 'images/img_placeholder.png';
+  document.getElementById('popup-img').src = 'images/bg1.png';
   document.getElementById('popup-description').innerHTML = arr1[0].popupdescription;
-  document.getElementById('popup-live').href = 'https://flunavgt.github.io/Federico-s_Portfolio/';
-  document.getElementById('popup-source').href = 'https://github.com/Camilovelag/MV_Portfolio';
+  document.getElementById('popup-live').href = '#';
+  document.getElementById('popup-source').href = '#';
 });
 
 const btn1 = document.querySelector('#project-1');
@@ -160,8 +160,8 @@ btn1.addEventListener('click', () => {
   document.getElementById('popup-techList3').innerHTML = lang3;
   document.getElementById('popup-img').src = proj1.img;
   document.getElementById('popup-description').innerHTML = arr1[1].popupdescription;
-  document.getElementById('popup-live').href = 'https://flunavgt.github.io/Federico-s_Portfolio/';
-  document.getElementById('popup-source').href = 'https://github.com/Camilovelag/MV_Portfolio';
+  document.getElementById('popup-live').href = '#';
+  document.getElementById('popup-source').href = '#';
 });
 
 const btn2 = document.querySelector('#project-2');
@@ -174,8 +174,8 @@ btn2.addEventListener('click', () => {
   document.getElementById('popup-techList3').innerHTML = lang3;
   document.getElementById('popup-img').src = 'images/img_placeholder.png';
   document.getElementById('popup-description').innerHTML = arr1[2].popupdescription;
-  document.getElementById('popup-live').href = 'https://flunavgt.github.io/Federico-s_Portfolio/';
-  document.getElementById('popup-source').href = 'https://github.com/Camilovelag/MV_Portfolio';
+  document.getElementById('popup-live').href = '#';
+  document.getElementById('popup-source').href = '#';
 });
 
 const closePopupWindow = document.querySelector('.close-popup');
@@ -206,6 +206,8 @@ if (windowWidth > 768) {
   document.getElementById('full_name').disabled = false;
 }
 
+
+// Progress Bar ----------------------
 window.onscroll = function() {myFunction()};
 
 function myFunction() {
@@ -215,14 +217,16 @@ function myFunction() {
   document.getElementById("myBar").style.width = scrolled + "%";
 }
 
+// Button animation ----------------------
+
 let toggleBtn = document.getElementById("toggle-btn");
 let menuItems = document.querySelectorAll(".menu a");
 let menuActive = false;
 toggleBtn.addEventListener("click", () => {
   if(!menuActive){
     menuItems[0].style.transform = "translate(150px,0)";
-    menuItems[1].style.transform = "translate(150px,90px)";
-    menuItems[2].style.transform = "translate(90px,150px)";
+    menuItems[1].style.transform = "translate(90px,90px)";
+    menuItems[2].style.transform = "translate(0,150px)";
     menuActive = true;
     toggleBtn.classList.add("active");
   }else{
